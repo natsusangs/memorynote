@@ -3,12 +3,12 @@ node_modules
 /dist
 
 # Environment variables - 修复：添加所有env文件类型
-.env
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
-.env.*.local
+/.env
+/.env.local
+/.env.development.local
+/.env.test.local
+/.env.production.local
+/.env.*.local
 
 # Log files
 npm-debug.log*
