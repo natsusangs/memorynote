@@ -376,9 +376,26 @@ export default {
         case 'RouteView':
           this.$router.push('/routeView')
           break
+        case 'device-settings':
+          this.showUserInfo()
+          break
         default:
           alert(`${feature.title} page is under development`)
       }
+    },
+
+    showUserInfo() {
+      const userId = this.$store.state.uid || this.$store.state.user?.id
+      const username = this.$store.state.user?.username || 'Unknown User'
+
+      const userMessage =  `User device information:
+      
+      Username: ${username}
+      Device ID: ${userId || 'Not available'}`
+      
+      alert(userMessage)
+
+      console.log(`Device ID: ${userId}`)
     },
 
     showHelp() {
